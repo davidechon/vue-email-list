@@ -12,18 +12,22 @@
 const app = new Vue ({
   el: '#app',
   data: {
-    mail:'',
+    mails:[],
   },
   methods:{
   
   },
   created() {
-    axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then((genMail) => {
-      this.mail = genMail.data.response;
-      console.log(genMail);
-    }).cath((error) => {
-      console.log(error);
-    })
+    for (let i = 0; i < 10; i++){
+     axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then((genMail) => {
+        this.mails = genMail.data.response;
+        console.log(genMail);
+      }).catch((error)=> {
+        console.log(error);
+      })
+   }
+      
+    
   }
 
 })
