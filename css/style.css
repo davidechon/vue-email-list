@@ -1,0 +1,16 @@
+/* body{background-color: red;} */
+/* Reset */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+.debug{
+  border: 1px solid red;
+}
+
+.container{
+  margin: 20px auto;
+  padding: 10px;
+}
