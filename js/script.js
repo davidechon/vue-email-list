@@ -14,6 +14,7 @@ const app = new Vue ({
   data: {
     mails: [],
     loading: '',
+    index:0, 
   },
   methods:{
     
@@ -26,7 +27,7 @@ const app = new Vue ({
       }).catch((error)=> {
         console.log(error);
       }).finally(()=> {
-        this.loading = false;
+        this.index++;
       })
         
       

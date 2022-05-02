@@ -27,8 +27,8 @@
   <div id="app">
     <ul>
       <li
-      v
-      v-for="mail in mails" v-if="!loading">{{mail}}</li>
+      v-if="index === 10 ? !loading : loading"
+      v-for="mail in mails">{{mail}}</li>
     </ul>
 </div>
 </div>
