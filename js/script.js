@@ -18,7 +18,7 @@ const app = new Vue ({
   
   },
   created(){
-    for (let i = 0; i <= 10; i++){
+    for (let i = 0; i < 10; i++){
      axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then((genMail) => {
         // this.mails = genMail.data.response;
        this.mails.push(genMail.data.response);
