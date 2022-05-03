@@ -13,8 +13,6 @@ const app = new Vue ({
   el: '#app',
   data: {
     mails: [],
-    loading: '',
-    index:0, 
   },
   methods:{
     
@@ -22,12 +20,10 @@ const app = new Vue ({
   created(){
     for (let i = 0; i < 10; i++){
      axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then((genMail) => {
+       console.log(genMail.data.response);
        this.mails.push(genMail.data.response);
-        console.log(genMail);
       }).catch((error)=> {
         console.log(error);
-      }).finally(()=> {
-        this.index++;
       })
         
       
